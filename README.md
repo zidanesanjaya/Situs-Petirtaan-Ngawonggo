@@ -1,9 +1,9 @@
 # Menu Option
-beranda
-sejarah
-icon
-reservasi
-letak
+  - beranda
+  - sejarah
+  - icon
+  - reservasi
+  - letak
 
 # Input Reservasi
 Nama: Gesti
