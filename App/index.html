@@ -287,12 +287,12 @@
             // Nomor Pesan WA
             var phone = "+6285745785615";
             // GET VALUE INPUT
-            var nama = document.getElementById('nama').value;
-            var asal = document.getElementById('asal').value;
-            var kepentingan = document.getElementById('kepentingan').value;
-            var jumlah = document.getElementById('jumlah').value;
-            var tanggal = document.getElementById('date').value;
-            var jam = document.getElementById('jam').value;
+            var nama = document.querySelector("[id='nama']");
+            var asal = document.querySelector("[id='asal']");
+            var kepentingan = document.querySelector("[id='kepentingan']");
+            var jumlah = document.querySelector("[id='jumlah']");
+            var tanggal = document.querySelector("[id='date']");
+            var jam = document.querySelector("[id='time']");
 
 
 
@@ -300,15 +300,14 @@
             const day = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
 
             // CONVERT TO STRING
-            let current_datetime = new Date(tanggal)
+            let current_datetime = new Date(tanggal.value)
             let i = current_datetime.getDay();
-            let formatted_date = current_datetime.getDate() + " " + months[current_datetime.getMonth()] + " " + current_datetime.getFullYear()
 
             // CLICKED METHOD
-            if (nama == 0 || tanggal == 0) {
-                window.location.href = "whatsapp://send?text=Hallo Cinta Travel , Saya Ingin Menggunakan Jasa Travel ini ! &phone="+phone;
+            if (nama.value == 0 || asal.value == 0 || kepentingan.value== 0 || jumlah.value== 0 || tanggal.value== 0 || jam.value==0) {
+              window.alert("Pastikan Data Terisi Semua")
             } else {
-                window.location.href = "whatsapp://send?text=Hallo Cinta Travel , Saya "+nama+" Ingin Melakukan Pemesanan Travel Pada Hari "+day[i]+" , "+formatted_date+"&phone="+phone;
+                window.location.href = "whatsapp://send?text=Hallo Situs Petirtaan Ngawonggo , Saya "+nama.value+" ingin melakukan reservasi tempat dengan data sebagai berikut %0a Nama : "+nama.value+"  %0a Asal : "+asal.value+"  %0a Kepentingan : "+kepentingan.value+"  %0a Jumlah Orang : "+jumlah.value+"  %0a Tanggal : "+day[current_datetime.getDay()]+" , "+current_datetime.getDay()+" "+months[current_datetime.getMonth()]+" "+current_datetime.getFullYear()+" %0a Jam : "+jam.value+"%0a %0a Terima Kasih &phone="+phone;
             }
         }
   </script>
@@ -329,29 +328,29 @@
           <div class="modal-body">
             <form>
               <div class="mb-3">
-                <input type="text" class="form-control" id="nama" placeholder="Nama" aria-describedby="nama">
+                <input type="text" class="form-control" id="nama" placeholder="Nama" aria-describedby="nama" required>
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control" id="asal" placeholder="Asal" aria-describedby="asal">
+                <input type="text" class="form-control" id="asal" placeholder="Asal" aria-describedby="asal" required>
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control" id="kepentingan" placeholder="Kepentingan" aria-describedby="kepentingan">
+                <input type="text" class="form-control" id="kepentingan" placeholder="Kepentingan" aria-describedby="kepentingan" required>
               </div>
               <div class="mb-3">
-                <input type="number" class="form-control" id="jumlah" placeholder="Jumlah Orang" aria-describedby="jumlah" min="1">
+                <input type="number" class="form-control" id="jumlah" placeholder="Jumlah Orang" aria-describedby="jumlah" min="1" required>
               </div>
               <div class="row pt-3">
                 <p class="font-weight-bold pl-3 text-secondary" style="font-size: 20px;">Kedatangan</p>
               </div>
               <div class="row">
                 <div class="col">
-                  <input type="date" class="form-control" id="date" placeholder="Tanggal Kedatangan" aria-describedby="date">
+                  <input type="date" class="form-control" id="date" placeholder="Tanggal Kedatangan" aria-describedby="date" required>
                 </div>
                 <div class="col">
-                  <input type="time" class="form-control" id="time" placeholder="Tanggal Kedatanga" aria-describedby="time">
+                  <input type="time" class="form-control" id="time" placeholder="Tanggal Kedatanga" aria-describedby="time" required>
                 </div>
               </div>
-              <button type="submit" class="btn btn-warning mt-3 text-white" width="100%">Reservasi Sekarang</button>
+              <button type="submit" class="btn btn-warning mt-3 text-white" width="100%" onclick="myFunction()">Reservasi Sekarang</button>
             </form> 
           </div>
 
