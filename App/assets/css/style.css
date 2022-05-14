@@ -23,6 +23,12 @@ a:hover {
   text-decoration: none;
 }
 
+.nav-pills .nav-item .active{
+  background-color: #fbd900;
+  color: white;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Jost", sans-serif;
 }
@@ -214,6 +220,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
   color: #47b2e4;
 }
+
 .navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
