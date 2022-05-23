@@ -28,6 +28,10 @@ a:hover {
   color: white;
 }
 
+.nav-pills .nav-item .nav-link{
+  /* background-color: #fbd900; */
+  color: #444444;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Jost", sans-serif;
