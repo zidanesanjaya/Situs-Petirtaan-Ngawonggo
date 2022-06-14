@@ -20,3 +20,12 @@ WA : 0812-4987-9428
 https://drive.google.com/drive/folders/1opbAc8d9tuZdOCRIFVbG7PUfTpaAYp8k
 https://drive.google.com/drive/folders/1ig8gYG8bEpmAzSnPDQREW77B2UVAaIJa?usp=sharing
 https://drive.google.com/drive/folders/1rJ_J3RUPycYDMFyakPLkBukeFvv_AdhO?usp=sharing
+
+# Password
+petirtaanngawonggo.com
+petirtaan123
+petirtaanngawonggo@gmail.com
+
+Domain	: www.situspetirtaanngawonggo.com
+cPanel Username	: situspet
+cPanel Password	: K;Agp79]Rc89Gf
